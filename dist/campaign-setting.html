@@ -159,7 +159,7 @@
                                     <i class="fas fa-undo mr-1"></i>
                                 </div>
                                 <div class="button-gruop">
-                                    <button class="btn btn-primary" type="button">신규</i></button>
+                                    <button class="btn btn-primary" type="button" data-toggle="modal" href="#campaign-form">신규</i></button>
                                     <button class="btn btn-primary" type="button">수정</i></button>
                                     <button class="btn btn-primary" type="button">삭제</i></button>
                                 </div>
@@ -318,6 +318,85 @@
                                             </div>
                                         </div>
                                         <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- 캠페인 상세정보 -->
+                        <div class="modal fade" id="campaign-form" role="dialog">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title">캠페인 등록</h4>
+                                  <button type="button" class="close" data-dismiss="modal">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <div>
+                                                <i class="fas fa-paper-plane mr-1"></i>
+                                                캠페인
+                                            </div>
+                                            <div class="button-gruop">
+                                                <button class="btn btn-primary" type="button">등록</i></button>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered" width="100%" cellspacing="0">
+                                                    <tr>
+                                                        <th>명칭</th>
+                                                        <td><input class="popup-input" type="text" value="명칭"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>실행 일시</th>
+                                                        <td><input type="text" class="popup-input" value="2021-03-20 12:30:00"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>종료 일시</th>
+                                                        <td><input type="text" class="popup-input" value="2021-03-20 12:30:00"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>혜택 종류</th>
+                                                        <td>
+                                                            <div class="button-gruop">
+                                                                <button class="btn btn-primary" type="button">금액 할인</i></button>
+                                                                <button class="btn btn-primary" type="button">% 할인</i></button>
+                                                                <button class="btn btn-primary" type="button">무료증정</i></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>상세 혜택</th>
+                                                        <td>
+                                                            <div class="button-gruop">
+                                                                <button class="btn btn-primary" type="button">메뉴 선택</i></button>
+                                                                <input class="popup-input" type="text" value=" - ">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>쿠폰 코드</th>
+                                                        <td>
+                                                            <div class="button-gruop">
+                                                                <button class="btn btn-primary" type="button">쿠폰 선택</i></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>내용</th>
+                                                        <td>
+                                                            <textarea class="popup-input" cols="60" rows="5">
+                                                            </textarea>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
