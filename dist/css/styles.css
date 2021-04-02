@@ -10265,6 +10265,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  text-align: left;
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
@@ -10297,4 +10298,44 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.popup-input {
+  display: inline;
+  border: none;
+  width: auto;
+}
+
+.chart-bar-icon * {
+  font-size: 1.5rem;
+}
+
+.chart-bar-icon {
+  text-align: center;
+}
+
+.modal-content {
+  width: 50rem;
+}
+
+.dropdown {
+  display: inline;
+}
+
+.dropdown-menu {
+  width: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+input[type=checkbox] {
+  width: 1.3em;
+  height: 1.3em;
 }
