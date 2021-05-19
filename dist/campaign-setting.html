@@ -70,6 +70,8 @@
                             <div class="collapse" id="collapseCommunications" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="message-setting.html">문자 설정</a>
+                                    <a class="nav-link" href="message-payment.html">문자결제카드등록</a>
+                                    <a class="nav-link" href="message-bill.html">문자사용(정산)내역</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMileages" aria-expanded="false" aria-controls="collapseMileages">
@@ -95,8 +97,8 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">캠페인 설정</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item"><a href="index.html">캠페인 매니저</a></li>
+                            <li class="breadcrumb-item active">캠페인 설정</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -136,9 +138,7 @@
                                     <i class="fas fa-undo mr-1"></i>
                                 </div>
                                 <div class="button-gruop">
-                                    <button class="btn btn-primary" type="button" data-toggle="modal" href="#campaign-form">신규</i></button>
-                                    <button class="btn btn-primary" type="button">수정</i></button>
-                                    <button class="btn btn-primary" type="button">삭제</i></button>
+                                    <button class="btn btn-primary" type="button" data-toggle="modal" href="campaign-edit.html">신규</i></button>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -158,7 +158,7 @@
                                         <tbody>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox" checked></td>
-                                                <td><a data-toggle="modal" href="#campaign-information">재고 세일</a></td>
+                                                <td><a data-toggle="modal" href="campaign-edit.html">재고 세일</a></td>
                                                 <td>종료</td>
                                                 <td>타임세일 진행합니...</td>
                                                 <td>2021-02-22</td>
@@ -167,7 +167,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox"></td>
-                                                <td><a data-toggle="modal" href="#campaign-information">핫치킨 프로모션</a></td>
+                                                <td><a data-toggle="modal" href="campaign-edit.html">핫치킨 프로모션</a></td>
                                                 <td>대기</td>
                                                 <td>핫치킨이 돌아왔다...</td>
                                                 <td>2021-04-13</td>
@@ -176,7 +176,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox"></td>
-                                                <td><a data-toggle="modal" href="#campaign-information">치팅데이</a></td>
+                                                <td><a data-toggle="modal" href="campaign-edit.html">치팅데이</a></td>
                                                 <td>진행중</td>
                                                 <td>오늘은 치팅데이 입...</td>
                                                 <td>2021-03-02</td>
@@ -185,7 +185,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox"></td>
-                                                <td><a data-toggle="modal" href="#campaign-information">화요일 이벤트</a></td>
+                                                <td><a data-toggle="modal" href="campaign-edit.html">화요일 이벤트</a></td>
                                                 <td>종료</td>
                                                 <td>화요일은 역시 치...</td>
                                                 <td>2020-11-17</td>
@@ -197,148 +197,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 캠페인 상세정보 -->
-                        <div class="modal fade" id="campaign-information" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h4 class="modal-title">캠페인 상세정보</h4>
-                                  <button type="button" class="close" data-dismiss="modal">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div>
-                                                <i class="fas fa-paper-plane mr-1"></i>
-                                                캠페인
-                                            </div>
-                                            <div class="button-gruop">
-                                                <button class="btn btn-primary" type="button">수정</i></button>
-                                                <button class="btn btn-primary" type="button">삭제</i></button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered" width="100%" cellspacing="0">
-                                                    <tr>
-                                                        <th>명칭</th>
-                                                        <td><input class="popup-input" type="text" value="타임 세일"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>상태</th>
-                                                        <td>종료</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>실행 일시</th>
-                                                        <td><input type="text" class="popup-input" value="2021-03-20 12:30:00"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>종료 일시</th>
-                                                        <td><input type="text" class="popup-input" value="2021-03-20 12:30:00"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>쿠폰 코드</th>
-                                                        <td><input type="text" class="popup-input" value="타임세일"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>내용</th>
-                                                        <td>
-                                                            <textarea class="popup-input" cols="60" rows="5">
-    전품목 타임세일
-    03-29
-    16:00~20:00
-                                                            </textarea>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div>
-                                                <i class="fas fa-chart-area mr-1"></i>
-                                                영역 차트
-                                            </div>
-                                        </div>
-                                        <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                    </div>
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div>
-                                                <i class="fas fa-chart-bar mr-1"></i>
-                                                막대 차트
-                                            </div>
-                                        </div>
-                                        <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        <!-- 캠페인 상세정보 -->
-                        <div class="modal fade" id="campaign-form" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h4 class="modal-title">캠페인 등록</h4>
-                                  <button type="button" class="close" data-dismiss="modal">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div>
-                                                <i class="fas fa-paper-plane mr-1"></i>
-                                                캠페인
-                                            </div>
-                                            <div class="button-gruop">
-                                                <button class="btn btn-primary" type="button">등록</i></button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered" width="100%" cellspacing="0">
-                                                    <tr>
-                                                        <th>명칭</th>
-                                                        <td><input class="popup-input" type="text" value="명칭"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>실행 일시</th>
-                                                        <td><input type="text" class="popup-input" value="2021-03-20 12:30:00"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>종료 일시</th>
-                                                        <td><input type="text" class="popup-input" value="2021-03-20 12:30:00"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>쿠폰 코드</th>
-                                                        <td>
-                                                            <div class="button-gruop">
-                                                                <button class="btn btn-primary" type="button">쿠폰 선택</i></button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>내용</th>
-                                                        <td>
-                                                            <textarea class="popup-input" cols="60" rows="5">
-                                                            </textarea>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">

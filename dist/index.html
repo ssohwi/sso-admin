@@ -94,6 +94,8 @@
                             <div class="collapse" id="collapseCommunications" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="message-setting.html">문자 설정</a>
+                                    <a class="nav-link" href="message-payment.html">문자결제카드등록</a>
+                                    <a class="nav-link" href="message-bill.html">문자사용(정산)내역</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMileages" aria-expanded="false" aria-controls="collapseMileages">
@@ -133,38 +135,48 @@
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                         <div class="row">
-                            <div class="col-xl-3 col-md-6">
+                            <!-- css 1496 라인 .col-xl-3 수정함-->
+                            <div class="col-xl-3-4 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">이번달 매출 현황</div>
+                                    <div class="card-body">전체고객수</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="text-white stretched-link" href="#">158 명</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-3-4 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">지난달 매출 현황</div>
+                                    <div class="card-body">신규고객수</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="text-white stretched-link" href="#">10 명</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-3-4 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">주간 매출 현황</div>
+                                    <div class="card-body">주문고객수</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="text-white stretched-link" href="#">30 명</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
+                            <div class="col-xl-3-4 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">어제 매출 현황</div>
+                                    <div class="card-body">결제금액</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="text-white stretched-link" href="#">9,253,00 원</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3-4 col-md-6">
+                                <div class="card bg-dark text-white mb-4">
+                                    <div class="card-body">결제건수</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="text-white stretched-link" href="#">43 건</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -176,7 +188,7 @@
                                     <div class="card-header">
                                         <div>
                                             <i class="fas fa-chart-area mr-1"></i>
-                                            월별 매출 증감
+                                            매출 통계
                                         </div>
                                     </div>
                                     <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
@@ -187,10 +199,126 @@
                                     <div class="card-header">
                                         <div>
                                             <i class="fas fa-chart-bar mr-1"></i>
-                                            매뉴별 주문 수량
+                                            진행중인 캠페인
                                         </div>
                                     </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>캠페인 명칭</th>
+                                                        <th>상태</th>
+                                                        <th>실행 날짜</th>
+                                                        <th>종료 날짜</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a data-toggle="modal" href="#campaign-information">재고 세일</a></td>
+                                                        <td>진행중</td>
+                                                        <td>2021-02-22</td>
+                                                        <td>2021-04-22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a data-toggle="modal" href="#campaign-information">핫치킨 프로모션</a></td>
+                                                        <td>대기</td>
+                                                        <td>2021-04-13</td>
+                                                        <td>2021-05-13</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a data-toggle="modal" href="#campaign-information">치팅데이</a></td>
+                                                        <td>진행중</td>
+                                                        <td>2021-03-02</td>
+                                                        <td>2021-04-30</td>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <div>
+                                            <i class="fas fa-info-circle mr-1"></i>
+                                            공지사항
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>서비스 개선</td>
+                                                        <td>04.13</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>안전거래 공지 안내</td>
+                                                        <td>03.02</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <div>
+                                            <i class="fas fa-envelope mr-1"></i>
+                                            문자 결제
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>발송횟수</td>
+                                                        <td>20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>결제금액</td>
+                                                        <td>5,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <div>
+                                            <i class="fas fa-chart-bar mr-1"></i>
+                                            진행중인 쿠폰
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>쿠폰 명칭</th>
+                                                        <th>상태</th>
+                                                        <th>실행 날짜</th>
+                                                        <th>종료 날짜</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a data-toggle="modal" href="#campaign-information">핫치킨</a></td>
+                                                        <td>대기</td>
+                                                        <td>2021-04-13</td>
+                                                        <td>2021-05-13</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -70,6 +70,8 @@
                             <div class="collapse" id="collapseCommunications" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="message-setting.html">문자 설정</a>
+                                    <a class="nav-link" href="message-payment.html">문자결제카드등록</a>
+                                    <a class="nav-link" href="message-bill.html">문자사용(정산)내역</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMileages" aria-expanded="false" aria-controls="collapseMileages">
@@ -95,8 +97,8 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">문자 설정</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item"><a href="index.html">커뮤니케이션 매니저</a></li>
+                            <li class="breadcrumb-item active">문자 설정</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -145,9 +147,7 @@
                                     <i class="fas fa-undo mr-1"></i>
                                 </div>
                                 <div class="button-gruop">
-                                    <button class="btn btn-primary" type="button" data-toggle="modal" href="#message-form">양식관리</i></button>
-                                    <button class="btn btn-primary" type="button">삭제</i></button>
-                                </div>
+                                    <button class="btn btn-primary" type="button" data-toggle="modal" href="message-form.html">양식관리</i></button>                                </div>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -166,7 +166,7 @@
                                         <tbody>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox" checked></td>
-                                                <td><a data-toggle="modal" href="#message-information">60명</a></td>
+                                                <td><a data-toggle="modal" href="message-edit.html">60명</a></td>
                                                 <td>SMS</td>
                                                 <td>예약</td>
                                                 <td>타임세일</td>
@@ -175,7 +175,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox"></td>
-                                                <td><a data-toggle="modal" href="#message-information">40명</a></td>
+                                                <td><a data-toggle="modal" href="message-edit.html">40명</a></td>
                                                 <td>LMS</td>
                                                 <td>예약</td>
                                                 <td>금액할인</td>
@@ -184,7 +184,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox"></td>
-                                                <td><a data-toggle="modal" href="#message-information">32명</a></td>
+                                                <td><a data-toggle="modal" href="message-edit.html">32명</a></td>
                                                 <td>SMS</td>
                                                 <td>즉시</td>
                                                 <td>금액할인</td>
@@ -193,7 +193,7 @@
                                             </tr>
                                             <tr>
                                                 <td><input id="check3" class="styled" type="checkbox"></td>
-                                                <td><a data-toggle="modal" href="#message-information">20명</a></td>
+                                                <td><a data-toggle="modal" href="message-edit.html">20명</a></td>
                                                 <td>SMS</td>
                                                 <td>즉시</td>
                                                 <td>-</td>
@@ -205,167 +205,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 문자발송 상세정보 -->
-                        <div class="modal fade" id="message-information" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h4 class="modal-title">문자발송 상세정보</h4>
-                                  <button type="button" class="close" data-dismiss="modal">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div>
-                                                <i class="fas fa-paper-plane mr-1"></i>
-                                                문자
-                                            </div>
-                                            <div class="button-gruop">
-                                                <button class="btn btn-primary" type="button">삭제</i></button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered" width="100%" cellspacing="0">
-                                                    <tr>
-                                                        <th>발송 대상</th>
-                                                        <td><input class="popup-input" type="text" value="60명"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>구분</th>
-                                                        <td>SMS</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>유형</th>
-                                                        <td><input type="text" class="popup-input" value="예약"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>분류</th>
-                                                        <td><input type="text" class="popup-input" value="타임세일"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>일시</th>
-                                                        <td><input type="text" class="popup-input" value="2021-03-20 12:30:00"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>전송 내용</th>
-                                                        <td>
-                                                            <textarea class="popup-input" cols="60" rows="5">
-(광고)텔라치킨 3/2 무료 시식행사 있습니다. 무료거부 0800000778 안양동안점
-                                                            </textarea>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        <!-- 문자 양식 관리 -->
-                        <div class="modal fade" id="message-form" role="dialog">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h4 class="modal-title">문자 양식 관리</h4>
-                                  <button type="button" class="close" data-dismiss="modal">×</button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="charge">
-                                        가상계좌 : 국민 244556-00-52-8568
-                                        <input class="form-control-search" type="text" value="잔액 : 8000" aria-label="Search" aria-describedby="basic-addon2" />
-                                        <div class="button-gruop">
-                                            <button class="btn btn-primary" type="button">문자 충전</i></button>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div>
-                                                <i class="fas fa-envelope mr-1"></i>
-                                                등록 양식 내역
-                                            </div>
-                                            <div class="button-gruop">
-                                                <button class="btn btn-primary" type="button">수정</i></button>
-                                                <button class="btn btn-primary" type="button">삭제</i></button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                                    <thead>
-                                                        <tr>
-                                                            <th><input id="check3" class="styled" type="checkbox"></th>
-                                                            <th>분류</th>
-                                                            <th>내용</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><input id="check3" class="styled" type="checkbox"></td>
-                                                            <td>타임세일</td>
-                                                            <td>(광고)텔라치킨 [날짜] [시간]시 [메뉴명][퍼센트]% 타임세일 세일</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><input id="check3" class="styled" type="checkbox"></td>
-                                                            <td>퍼센트세일</td>
-                                                            <td>(광고)텔라치킨 [날짜] [메뉴명][퍼센트]% 타임세일 세일</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><input id="check3" class="styled" type="checkbox"></td>
-                                                            <td>쿠폰전송</td>
-                                                            <td>(광고)텔라치킨 [쿠폰이름] 쿠폰이 발급되었습니다.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <div>
-                                                <i class="fas fa-envelope mr-1"></i>
-                                                양식 등록
-                                            </div>
-                                            <div class="button-gruop">
-                                                <button class="btn btn-primary" type="button">등록</i></button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                                    <thead>
-                                                        <tr>
-                                                            <th colspan="2">
-                                                                삽입&nbsp;&nbsp;
-                                                                <i class="fas fa-calendar"></i>&nbsp;&nbsp;
-                                                                <i class="fas fa-clock"></i>&nbsp;&nbsp;
-                                                                <i class="fas fa-book"></i>&nbsp;&nbsp;
-                                                                <i class="fas fa-percent"></i>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>쿠폰전송</td>
-                                                            <td>(광고)텔라치킨 [쿠폰이름] 쿠폰이 발급되었습니다. 무료거부 0800000778 안양동안점</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
