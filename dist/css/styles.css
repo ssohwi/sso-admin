@@ -10299,9 +10299,14 @@ body {
   display: inline-block;
 }
 
+.charge input {
+  width: fit-content;
+}
+
 .charge {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 1rem;
 }

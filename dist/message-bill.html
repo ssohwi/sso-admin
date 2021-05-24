@@ -101,60 +101,25 @@
                             <li class="breadcrumb-item active">문자사용(정산)내역</li>
                         </ol>
                         <div class="charge">
-                            이번달 누적 금액 : 
-                            <input class="form-control-search" type="text" value="8000" aria-label="Search" aria-describedby="basic-addon2" />
-                            이번달 누적 횟수 : 
-                            <input class="form-control-search" type="text" value="8000" aria-label="Search" aria-describedby="basic-addon2" />
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <div>
-                                    검색 조건 
-                                    <i class="fas fa-undo mr-1"></i>
-                                </div>
-                                <div class="button-gruop">
-                                    <button class="btn btn-primary" type="button">검색</i></button>
-                                </div>
+                            <div>
+                                <span>이번달 문자 발송:</span>
+                                <input class="form-control-search" type="text" value="SMS 7건" aria-label="Search" aria-describedby="basic-addon2" />
+                                <input class="form-control-search" type="text" value="LMS 11건" aria-label="Search" aria-describedby="basic-addon2" />
                             </div>
-                            <div class="card-body">
-                                <input class="form-control-search" type="text" placeholder="2020-12-03" aria-label="Search" aria-describedby="basic-addon2" />
-                                <input class="form-control-search" type="text" placeholder="2021-03-03" aria-label="Search" aria-describedby="basic-addon2" />  
-                                <div class="dropdown">
-                                    <button id="dLabel" class="form-control-search" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      발송유형 <i class="fas fa-caret-down"></i>
-                                      <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                      <li class="dropdown-item">예약</li>
-                                      <li class="dropdown-item">즉시</li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown">
-                                    <button id="dLabel" class="form-control-search" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       분류 <i class="fas fa-caret-down"></i>
-                                      <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                      <li class="dropdown-item">타임세일</li>
-                                      <li class="dropdown-item">금액할인</li>
-                                      <li class="dropdown-item">퍼센트세일</li>
-                                    </ul>
-                                </div>
-                                <input class="form-control-search" type="text" placeholder="전송내용" aria-label="Search" aria-describedby="basic-addon2" />
-                                <!-- DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-                                . -->
+                            <div>
+                                <span>결제예정금액 : </span>
+                                <input class="form-control-search" type="text" value="8000 원" aria-label="Search" aria-describedby="basic-addon2" />
+                            </div>
+                            <div>
+                                <span>결제예정일 :</span>
+                                <input class="form-control-search" type="text" value="2021-06-05" aria-label="Search" aria-describedby="basic-addon2" />
                             </div>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <div>
-                                    검색 결과 
+                                    결제 내역
                                     <i class="fas fa-undo mr-1"></i>
-                                </div>
-                                <div class="button-gruop">
-                                    <button class="btn btn-primary" type="button" data-toggle="modal" href="#message-form">양식관리</i></button>
-                                    <button class="btn btn-primary" type="button">삭제</i></button>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -162,41 +127,62 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>발송 대상</th>
-                                                <th>구분</th>
-                                                <th>일시</th>
-                                                <th>건수</th>
-                                                <th>금액</th>
+                                                <th>사용 월</th>
+                                                <th>결제 금액</th>
+                                                <th>세부 내역</th>
+                                                <th>결제 일시</th>
+                                                <th>결제 수단</th>
+                                                <th>결과</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><a data-toggle="modal">60명</a></td>
-                                                <td>SMS</td>
-                                                <td>2021-02-22</td>
-                                                <td>60</td>
-                                                <td>1,200</td>
+                                                <td>2021년 4월</td>
+                                                <td>1,200원</td>
+                                                <td>SMS 40건, LMS 5건</td>
+                                                <td>2021-05-05 오후3시26분</td>
+                                                <td>국민카드 4865</td>
+                                                <td>결제 완료</td>
                                             </tr>
                                             <tr>
-                                                <td><a data-toggle="modal">40명</a></td>
-                                                <td>LMS</td>
-                                                <td>2021-04-13</td>
-                                                <td>40</td>
-                                                <td>1,200</td>
+                                                <td>2021년 3월</td>
+                                                <td>1,200원</td>
+                                                <td>SMS 4건, LMS 12건</td>
+                                                <td>2021-04-05 오후3시20분</td>
+                                                <td>국민카드 4865</td>
+                                                <td>결제 완료</td>
                                             </tr>
                                             <tr>
-                                                <td><a data-toggle="modal">32명</a></td>
-                                                <td>SMS</td>
-                                                <td>2021-03-30</td>
-                                                <td>32</td>
-                                                <td>640</td>
+                                                <td>2021년 2월</td>
+                                                <td>640원</td>
+                                                <td>SMS 8건, LMS 4건</td>
+                                                <td>2021-03-15 오후3시27분</td>
+                                                <td>국민카드 4865</td>
+                                                <td>결제 완료</td>
                                             </tr>
                                             <tr>
-                                                <td><a data-toggle="modal">20명</a></td>
-                                                <td>SMS</td>
-                                                <td>2020-11-18</td>
-                                                <td>20</td>
-                                                <td>400</td>
+                                                <td>2021년 2월</td>
+                                                <td>640원</td>
+                                                <td>SMS 8건, LMS 4건</td>
+                                                <td>2021-03-05 오후3시22분</td>
+                                                <td>국민카드 4865</td>
+                                                <td>결제 실패</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2021년 1월</td>
+                                                <td>640원</td>                                                
+                                                <td>SMS 8건, LMS 4건</td>
+                                                <td>2021-02-05 오후3시27분</td>
+                                                <td>국민카드 4865</td>
+                                                <td>결제 완료</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2020년 12월</td>
+                                                <td>640원</td>                                                
+                                                <td>SMS 8건, LMS 4건</td>
+                                                <td>2021-01-05 오후3시27분</td>
+                                                <td>국민카드 4865</td>
+                                                <td>결제 완료</td>
                                             </tr>
                                         </tbody>
                                     </table>
