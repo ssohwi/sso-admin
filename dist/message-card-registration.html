@@ -117,50 +117,32 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             <div>
-                                <i class="fas fa-info-circle mr-1"></i>
-                                결제 수단
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <!-- <div class="col-xl-3-4 col-md-6">
-                                        <div class="card bg-primary text-white mb-4">
-                                            <div class="card-body">국민카드 (5564)</div>
-                                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                                <a class="small text-white stretched-link" href="#">KB국민 nori 체크카드(RF)</a>
-                                                <div class="small text-white"><i class="fas fa-ellipsis-v"></i></div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                            <div class="d-flex align-items-center justify-content-between small">
-                                <div class="text-muted">국민카드 ****-****-****-5564</div>
-                                <div>
-                                    <div>
-                                        <a href="message-card-registration.html">결제 정보 업데이트</a>
-                                    </div>
-                                    <div>
-                                        <a href="message-card-registration.html">결제 상세 정보</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <div>
                                 <i class="fas fa-credit-card mr-1"></i>
-                                결제 정보(카드 미등록)
+                                결제 상세 정보
                             </div>
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
-                                    <label class="small mb-1" for="inputProductName">상품명</label>
-                                    <input class="form-control py-4" id="inputProductName" type="text"
-                                        placeholder="상품명">
+                                    <label class="small mb-1" for="inputCardCompany">카드사</label>
+                                    <input class="form-control py-4" id="inputCardCompany" type="text"
+                                        value="롯데카드">
                                 </div>
                                 <div class="form-group">
-                                    <label class="small mb-1" for="inputPrice">거래금액</label>
-                                    <input class="form-control py-4" id="inputPrice" type="text" placeholder="거래금액">
+                                    <label class="small mb-1" for="inputCardNumber">카드번호</label>
+                                    <input class="form-control py-4" id="inputCardNumber" type="text" value="****-****-****-5564">
+                                </div>
+                                <div class="form-group">
+                                    <label class="small mb-1" for="inputCardNumber">유효기간</label>
+                                    <input class="form-control py-4" id="inputCardNumber" type="text" value="23/05">
+                                </div>
+                                <div class="form-group">
+                                    <label class="small mb-1" for="inputCardNumber">CVC</label>
+                                    <input class="form-control py-4" id="inputCardNumber" type="text" value="123">
+                                </div>
+                                <div class="form-group">
+                                    <label class="small mb-1" for="inputCardNumber">비밀번호</label>
+                                    <input class="form-control py-4" id="inputCardNumber" type="password" value="23">
                                 </div>
                                 <div class="form-group">
                                     <label class="small mb-1" for="inputCusomerName">구매자명</label>
@@ -174,75 +156,14 @@
                                 <div class="form-group">
                                     <label class="small mb-1" for="inputPhoneNumber">휴대폰 번호</label>
                                     <input class="form-control py-4" id="inputPhoneNumber" type="text"
-                                        placeholder="휴대폰 번호">
+                                        placeholder="010-****-5545">
                                 </div>
                                 <div class="form-group">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="termsAndConditions" type="checkbox">
-                                        <label class="custom-control-label" for="termsAndConditions">이용 약관 동의</label>
-                                    </div>
+                                    <label class="small mb-1" for="inputCardNumber">정기 결제일</label>
+                                    <input class="form-control py-4" id="inputCardNumber" type="text" value="15 일">
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                    <a class="btn btn-primary" href="#">결제 요청</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <div>
-                                <i class="fas fa-credit-card mr-1"></i>
-                                결제 정보(카드 등록)
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                    <div class="selectbox">
-                                        <label class="small mb-1" for="selectCard">결제 수단</label>
-                                        <br>
-                                        <select name="selectCard" class="select-menu form-control">
-                                            <option value="">선택</option>
-                                            <option value="">국민카드 (4567)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="inputProductName">상품명</label>
-                                    <input class="form-control py-4" id="inputProductName" type="text"
-                                        placeholder="상품명">
-                                </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="inputPrice">거래금액</label>
-                                    <input class="form-control py-4" id="inputPrice" type="text" placeholder="거래금액">
-                                </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="inputEmailAddress">이메일</label>
-                                    <input class="form-control py-4" id="inputEmailAddress" type="email"
-                                        placeholder="이메일">
-                                </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="inputPhoneNumber">휴대폰 번호</label>
-                                    <input class="form-control py-4" id="inputPhoneNumber" type="text"
-                                        placeholder="휴대폰 번호">
-                                </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="leviedTax">부과세</label>
-                                    <input class="form-control py-4" id="leviedTax" type="text" placeholder="부과세">
-                                </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="taxFree">비과세</label>
-                                    <input class="form-control py-4" id="taxFree" type="text" placeholder="비과세">
-                                </div>
-                                <div class="form-group">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="termsAndConditions" type="checkbox">
-                                        <label class="custom-control-label" for="termsAndConditions">이용 약관 동의</label>
-                                    </div>
-                                </div>
-                                <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                    <a class="btn btn-primary" href="#">결제 요청</a>
+                                    <a class="btn btn-primary" href="#">업데이트</a>
                                 </div>
                             </form>
                         </div>
